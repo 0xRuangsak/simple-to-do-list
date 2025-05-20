@@ -11,7 +11,7 @@ function add(val) {
 }
 function remove(val) {
     const index = to_do.indexOf(val);
-    to_do.splice(index, val);
+    to_do.splice(index, 1);
 }
 function shiftUp(val) {
     const index = to_do.indexOf(val);
