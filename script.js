@@ -7,15 +7,17 @@ function remove(val) {
     const index = to_do.indexOf(val);
     to_do.splice(index, val);
 }
-function shift_up(val) {
+function shiftUp(val) {
     const index = to_do.indexOf(val);
     if ((index > 0) && (index < to_do.length)) {
         [to_do[index],to_do[index - 1]] = [to_do[index - 1], to_do[index]];
     }
 }
-function shift_down(val) {
+function shiftDown(val) {
     const index = to_do.indexOf(val);
     if ((index > 0) && (index < to_do.length)) {
         [to_do[index],to_do[index + 1]] = [to_do[index + 1], to_do[index]];
     }
 }
+
+function reloadPage() {}
