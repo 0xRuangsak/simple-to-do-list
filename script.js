@@ -21,7 +21,7 @@ function shiftUp(val) {
 }
 function shiftDown(val) {
     const index = to_do.indexOf(val);
-    if ((index > 0) && (index < to_do.length)) {
+    if ((index >= 0) && (index < to_do.length - 1)) {
         [to_do[index],to_do[index + 1]] = [to_do[index + 1], to_do[index]];
     }
 }
