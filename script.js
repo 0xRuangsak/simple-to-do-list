@@ -9,13 +9,13 @@ function remove(val) {
 }
 function shift_left(val) {
     const index = to_do.indexOf(val);
-    if ((index > 0) && (index < to_do.length())) {
+    if ((index > 0) && (index < to_do.length)) {
         to_do[index],to_do[index - 1] = to_do[index - 1], to_do[index];
     }
 }
 function shift_right(val) {
     const index = to_do.indexOf(val);
-    if ((index > 0) && (index < to_do.length())) {
+    if ((index > 0) && (index < to_do.length)) {
         to_do[index],to_do[index + 1] = to_do[index + 1], to_do[index];
     }
 }

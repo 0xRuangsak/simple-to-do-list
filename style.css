@@ -3,8 +3,3 @@
     align-items: center;
     gap: 8px;
 }
-.list-item ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
