@@ -1,3 +1,8 @@
+const upButton = document.getElementById('upButton');
+const downButton = document.getElementById('downButton');
+const addButton = document.getElementById('addButton');
+const removeButton = document.getElementById('removeButton');
+
 let to_do = [];
 
 function add(val) {
@@ -20,4 +25,6 @@ function shiftDown(val) {
     }
 }
 
-function reloadPage() {}
+function reloadPage() {
+
+}
