@@ -4,28 +4,36 @@ const addButton = document.getElementById('addButton');
 const removeButton = document.getElementById('removeButton');
 const refreshButton = document.getElementById('refreshButton');
 
-let to_do = [];
+let todo = ["placeholder1","placeholder2","placeholder3"];
 
 function add(val) {
-    to_do.push(val);
+    todo.push(val);
 }
 function remove(val) {
-    const index = to_do.indexOf(val);
-    to_do.splice(index, 1);
+    const index = todo.indexOf(val);
+    todo.splice(index, 1);
 }
 function shiftUp(val) {
-    const index = to_do.indexOf(val);
-    if ((index > 0) && (index < to_do.length)) {
-        [to_do[index],to_do[index - 1]] = [to_do[index - 1], to_do[index]];
+    const index = todo.indexOf(val);
+    if ((index > 0) && (index < todo.length)) {
+        [todo[index],todo[index - 1]] = [todo[index - 1], todo[index]];
     }
 }
 function shiftDown(val) {
-    const index = to_do.indexOf(val);
-    if ((index >= 0) && (index < to_do.length - 1)) {
-        [to_do[index],to_do[index + 1]] = [to_do[index + 1], to_do[index]];
+    const index = todo.indexOf(val);
+    if ((index >= 0) && (index < todo.length - 1)) {
+        [todo[index],todo[index + 1]] = [todo[index + 1], todo[index]];
     }
 }
 
 function updateDisplay() {
+    const todoList = document.getElementById("ul");
+    todoList.innerHTML = "";
 
+    for (let i = 0; i < todo.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = todo[i];
+        li.dataset.index = i;
+        todoList.appendChild(li);
+    }
 }
