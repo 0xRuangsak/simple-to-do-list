@@ -27,7 +27,7 @@ function shiftDown(val) {
 }
 
 function updateDisplay() {
-    const todoList = document.getElementById("ul");
+    const todoList = document.querySelector("ul");
     todoList.innerHTML = "";
 
     for (let i = 0; i < todo.length; i++) {
